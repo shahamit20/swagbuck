@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Swagbucks</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ======= Navigation Bar ======= -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Swagbucks</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Smile</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="redeem.html">Redeem</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="faq.html">FAQ's</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+            <div class="nav-icons">
+                <span class="coins">💰 <span id="total-coins">0</span> SB</span>
+                <span class="notifications">🔔</span>
+                <a href="account.html" class="account">👤</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ======= Dashboard Content ======= -->
+    <main class="dashboard-container">
+        <!-- Top Buttons -->
+        <div class="top-buttons">
+            <button class="btn survey-btn"><a href="surveys.html">Surveys</a></button>
+            <button class="btn activity-btn"><a href="activity.html">Activity</a></button>
+        </div>
+
+        <!-- Charts Section -->
+        <section class="charts-container">
+            <div class="chart-box">
+                <canvas id="activityChart"></canvas>
+            </div>
+            <div class="total-coins-box">
+                <h2>Total SB Coins</h2>
+                <p id="total-coins-display">0 SB</p>
+            </div>
+        </section>
+        <section class="earnings-breakdown">
+            <div class="earn-box">
+            <img src="assets/images/survey.svg" class="earnings-icon" alt="Survey Icon">
+            <h3>Taking Surveys</h3>
+            <p id="survey-total">0 SB</p>
+        </div>
+        <div class="earn-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="earnings-icon" alt="Referral Icon">
+            <h3>Referral Earnings</h3>
+            <p id="referral-coins">0 SB</p>
+            <span class="info">10% Lifetime Earnings <i class="fa fa-info-circle"></i></span>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://example.com&text=Check%20this%20out!" target="_blank" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://api.whatsapp.com/send?text=Check%20this%20out!%20https://example.com" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+              </div>
+        </div>
+        
+    </section>
+
+
+        <!-- Recent Selfies -->
+        <section class="selfies-section">
+            <h2>Recent Selfies</h2>
+            <div class="selfies-grid" id="selfies-grid">
+                <!-- Selfies dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- ======= Footer ======= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Cookies Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="mailto:support@swagbucks.com">Email Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Subscribe to Our Newsletter</h4>
+                <form action="#" class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <ul class="social-links">
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>  
+            </ul>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2025 Swagbucks. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

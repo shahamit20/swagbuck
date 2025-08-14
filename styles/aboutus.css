@@ -1,0 +1,280 @@
+/* General Styling */
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+    color: #fff;
+}
+
+/* ===== Banner Section ===== */
+.banner {
+    position: relative;
+    background: url('../assets/images/smile-detection.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.banner .cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #f5a623;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.banner .cta-button:hover {
+    background: #d88d1e;
+}
+
+/* ===== Our Journey & Achievements ===== */
+.journey-achievements {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.box {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* 🌍 Mission & Vision Section */
+.mission-vision {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 50px auto;
+    padding: 40px;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 🔥 Mission & Vision Boxes */
+.mission-box, .vision-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mission-box:hover, .vision-box:hover {
+    transform: translateY(-5px);
+}
+
+.mission-content, .vision-content {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.mission-content h2, .vision-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.mission-icon, .vision-icon {
+    width: 80px;
+}
+
+.mission-icon img, .vision-icon img {
+    width: 100%;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* 🔮 Future Section */
+.future-box {
+    background: linear-gradient(135deg, #2a2f3b, #3e3f4c);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.future-box:hover {
+    transform: translateY(-5px);
+}
+
+.future-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.community {
+    margin-top: 80px;
+    backdrop-filter: blur(10px);
+    padding: 50px 30px;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+}
+
+/* Heading */
+.community h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fdf9f9;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+.community p {
+    font-size: 1.2rem;
+    color: #ddd4d4;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+/* ===== Our Team Section ===== */
+.team {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e3dada;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+/* Team Members */
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+}
+
+/* Team Card */
+.team-box {
+    width: 280px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Team Image */
+.team-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+
+/* Name & Role */
+.team-box h3 {
+    font-size: 1.5rem;
+    color: #e9d9d9;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.team-box p {
+    font-size: 1rem;
+    color: #89a0df;
+}
+
+/* Hover Effects */
+.team-box:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.team-box:hover img {
+    transform: scale(1.1);
+}
+
+/* Social Media Icons */
+.team-box .social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.team-box .social-icons a {
+    color: #ff4500;
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+.team-box .social-icons a:hover {
+    color: #e63900;
+    transform: scale(1.2);
+}
+
+/* Hidden Cards */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-box {
+        width: 90%;
+    }
+}

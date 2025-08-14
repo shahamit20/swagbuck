@@ -1,0 +1,410 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account - Swagbucks</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/account.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Swagbucks</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Smile</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="redeem.html">Redeem</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="faq.html">FAQ's</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+      <div class="nav-icons">
+        <span class="coins">💰 1250 SB</span>
+        <span class="notifications">🔔</span>
+        <a href="account.html" class="account">👤</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white/90 backdrop-blur-lg rounded-2xl shadow-xl w-full max-w-2xl p-8 space-y-8">
+      <div class="relative">
+        <div class="flex justify-center">
+          <div class="relative group">
+            <div class="relative w-32 h-32 profile-image-container">
+              <img id="profile-image"
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop" alt=""
+                class="w-full h-full rounded-full object-cover border-4 border-white shadow-lg transition-transform duration-300 hover:scale-105" />
+              <button onclick="toggleAvatarSelector(event)"
+                class="camera-button absolute bottom-0 right-0 bg-blue-500 text-white p-2 rounded-full shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                  <circle cx="12" cy="13" r="3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="overlay" class="overlay" onclick="hideAvatarSelector()"></div>
+
+        <div id="avatar-selector" class="avatar-selector">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-semibold">Change Profile Picture</h2>
+            <button onclick="hideAvatarSelector()" class="text-gray-500 hover:text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="tabs">
+            <div class="tab active" onclick="switchTab(this, 'illustrations')">Illustrations</div>
+            <div class="tab" onclick="switchTab(this, 'upload')">Upload</div>
+          </div>
+
+          <div id="illustrations-tab" class="avatar-grid">
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/TjxWG6c9uAs3JH3HvPbsXg6PQLqSZROvkKf5Uqtrm0CWMTlCj8sv9UKCDdKl6BYi0l-g_ZYkDrD4Q4sd5drY_tK7=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/TjxWG6c9uAs3JH3HvPbsXg6PQLqSZROvkKf5Uqtrm0CWMTlCj8sv9UKCDdKl6BYi0l-g_ZYkDrD4Q4sd5drY_tK7=s155"
+                alt="Avatar 1" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/vZBMZdK5DnKt6BnWOQKhV_48zS3PGR_usSFGXtBrjsYx4D4iwMejI0VliDgRxaQHURwblwkx5wBdw52-4rt1T45FJg=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/vZBMZdK5DnKt6BnWOQKhV_48zS3PGR_usSFGXtBrjsYx4D4iwMejI0VliDgRxaQHURwblwkx5wBdw52-4rt1T45FJg=s155"
+                alt="Avatar 2" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/27EufDhEfc2d9q2jl6Yg4eLN6FfiMIZZ97X8b4zXfQLg29IXOu-2TZpPaWGR02gdP0-73lqJBZMh4HRpBhwEKooxIw=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/27EufDhEfc2d9q2jl6Yg4eLN6FfiMIZZ97X8b4zXfQLg29IXOu-2TZpPaWGR02gdP0-73lqJBZMh4HRpBhwEKooxIw=s155"
+                alt="Avatar 3" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/lHItJcYf5nd2xpfIOyBHb1KXhl4ljWZBVx0-2W3VsIcqBgR58aNVDFtm-VQFKtjfZc2wiRxtqBdAhOGm6seZw1G9zg=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/lHItJcYf5nd2xpfIOyBHb1KXhl4ljWZBVx0-2W3VsIcqBgR58aNVDFtm-VQFKtjfZc2wiRxtqBdAhOGm6seZw1G9zg=s155"
+                alt="Avatar 4" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/3J3vJ-FdhHY3ufSgUhApLqdSXWt97e6ambhJODo2mliUOMLt8shZz6WHCuw7k-gMwCEfs3lCubpHjV-a8i9OG2sQeps=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/3J3vJ-FdhHY3ufSgUhApLqdSXWt97e6ambhJODo2mliUOMLt8shZz6WHCuw7k-gMwCEfs3lCubpHjV-a8i9OG2sQeps=s155"
+                alt="Avatar 5" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/T4nJk1BLWqJL9Dw4kJAmq_rsoj9O6iPNER00NjwqaIdWM-H67FdAEhY-tks9T2ZPLs9yKYQ-E9Dbk5GgiNVz7P78=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/T4nJk1BLWqJL9Dw4kJAmq_rsoj9O6iPNER00NjwqaIdWM-H67FdAEhY-tks9T2ZPLs9yKYQ-E9Dbk5GgiNVz7P78=s155"
+                alt="Avatar 6" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/ZzJwOdTFqJ5dAX8ZKPF6OaUzCyUVieOI03z5AhdurOlXFJwDfBUBiEyDi8l6Rcy7zZi44u1_byPHDctaHD6tmvfGng=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/ZzJwOdTFqJ5dAX8ZKPF6OaUzCyUVieOI03z5AhdurOlXFJwDfBUBiEyDi8l6Rcy7zZi44u1_byPHDctaHD6tmvfGng=s155"
+                alt="Avatar 7" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/GXv-Z6uEWrtktfb5l6SXBqbBiqqdEo3KBhpquA-gToIfNdV7h1iCxA1yf3nstblmr--vN3Teaf1k1Fv2sei7Oktv=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/GXv-Z6uEWrtktfb5l6SXBqbBiqqdEo3KBhpquA-gToIfNdV7h1iCxA1yf3nstblmr--vN3Teaf1k1Fv2sei7Oktv=s155"
+                alt="Avatar 8" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/ImhFUy7XHZLNtMkpHp8-U53oVWYgRy9tfnK_d162Nsp5jWXJtoUeuOVp8FQNx1KZusDYbPsUNx6krWHSvOU0uNjCXw=s172')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/ImhFUy7XHZLNtMkpHp8-U53oVWYgRy9tfnK_d162Nsp5jWXJtoUeuOVp8FQNx1KZusDYbPsUNx6krWHSvOU0uNjCXw=s172"
+                alt="Avatar 9" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/zsTd2X7C_VU0qj5TEbg-RYahP4U3SVtJJ7V9tBMY1wNMNHQbLootvCqxa3tSHWyjgQWbvOwDjRdzHpFwVMkdWfGNsA=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/zsTd2X7C_VU0qj5TEbg-RYahP4U3SVtJJ7V9tBMY1wNMNHQbLootvCqxa3tSHWyjgQWbvOwDjRdzHpFwVMkdWfGNsA=s155"
+                alt="Avatar 10" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/1T2v-WTtix4hPe_696Pcyn9QRz6dfydFUOhOQKF6UDhxYtAZqySyM3vtn2K3xlQqNWehjIqvVBNsNZstjFgjtPtX=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/1T2v-WTtix4hPe_696Pcyn9QRz6dfydFUOhOQKF6UDhxYtAZqySyM3vtn2K3xlQqNWehjIqvVBNsNZstjFgjtPtX=s155"
+                alt="Avatar 11" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/m17jTIwWAM4A_7zjiqCtvjf5FKCCQU1BUkIQH2woGWkkOHvgyt71gnjxvSOl-VZ0cB4H5YJlJUE2AtADyy9s38gk5g=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/m17jTIwWAM4A_7zjiqCtvjf5FKCCQU1BUkIQH2woGWkkOHvgyt71gnjxvSOl-VZ0cB4H5YJlJUE2AtADyy9s38gk5g=s155"
+                alt="Avatar 12" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/gJoqoiZRXoWRCQwuQ_eP3ijjuaPOoSpte-X1UJoDW3-rXxrhGPTH533HKjSk7cN29CFUPt0nIMLfMak-eJGZkt92Ug=s172')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/gJoqoiZRXoWRCQwuQ_eP3ijjuaPOoSpte-X1UJoDW3-rXxrhGPTH533HKjSk7cN29CFUPt0nIMLfMak-eJGZkt92Ug=s172"
+                alt="Avatar 13" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/lGTRmI0EQPIo1ATci2omg9C4IADCKd7nZLLlnlFDcsq8WjIhCa3Ti5MZyCDgUeUoBC4u8k28AZulTGHwuN-dPt7R=s172')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/lGTRmI0EQPIo1ATci2omg9C4IADCKd7nZLLlnlFDcsq8WjIhCa3Ti5MZyCDgUeUoBC4u8k28AZulTGHwuN-dPt7R=s172"
+                alt="Avatar 14" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/raQQcXfOkuIg41uPzCaPFIb2ZWttklTOlshdq1wqOIkWtKMqM_yCd6APXL-zBDivKNt0fKVhntQd4KMynxhGXE9aEw=s172')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/raQQcXfOkuIg41uPzCaPFIb2ZWttklTOlshdq1wqOIkWtKMqM_yCd6APXL-zBDivKNt0fKVhntQd4KMynxhGXE9aEw=s172"
+                alt="Avatar 15" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/4gXHiGaTEYEYdo6XGC9FVoJ1VB_QCBlItMRlvOwwVs6CFMm5Tk4uW5vKrfnqLuflOfPmEsj6__bN-1iJbs1ZQ1QCyC0=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/4gXHiGaTEYEYdo6XGC9FVoJ1VB_QCBlItMRlvOwwVs6CFMm5Tk4uW5vKrfnqLuflOfPmEsj6__bN-1iJbs1ZQ1QCyC0=s155"
+                alt="Avatar 16" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/l2vouNfcykniUlo6K_AUlbWTLY-nOpu1NLLa_tPfNP5U1I_UbpfBKNpDitNprBik0wBgJPuGa0z31dTEthGup8HvFA=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/l2vouNfcykniUlo6K_AUlbWTLY-nOpu1NLLa_tPfNP5U1I_UbpfBKNpDitNprBik0wBgJPuGa0z31dTEthGup8HvFA=s155"
+                alt="Avatar 17" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/vj2etDjHtjZ5z1BHgzNP0u7XMoAVl5x0SdgiygVPwF0cMMQuvphmSo0kb_qfkLAxer1PW2fxw_qAm_Xw1BRV_N-9=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/vj2etDjHtjZ5z1BHgzNP0u7XMoAVl5x0SdgiygVPwF0cMMQuvphmSo0kb_qfkLAxer1PW2fxw_qAm_Xw1BRV_N-9=s155"
+                alt="Avatar 18" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/TjxWG6c9uAs3JH3HvPbsXg6PQLqSZROvkKf5Uqtrm0CWMTlCj8sv9UKCDdKl6BYi0l-g_ZYkDrD4Q4sd5drY_tK7=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/TjxWG6c9uAs3JH3HvPbsXg6PQLqSZROvkKf5Uqtrm0CWMTlCj8sv9UKCDdKl6BYi0l-g_ZYkDrD4Q4sd5drY_tK7=s155"
+                alt="Avatar 19" class="w-full h-full object-cover">
+            </button>
+            <button
+              onclick="selectAvatar('https://lh3.googleusercontent.com/hHotZNTACDQO3rdjUbqvyVvVK-rbXhOP4VMDig9J_gSlZV7ZO6BBEzv3RuMC1cDIJyljcuzkUvwC_jUhElHvpq0zrBc=s155')"
+              class="avatar-option">
+              <img
+                src="https://lh3.googleusercontent.com/hHotZNTACDQO3rdjUbqvyVvVK-rbXhOP4VMDig9J_gSlZV7ZO6BBEzv3RuMC1cDIJyljcuzkUvwC_jUhElHvpq0zrBc=s155"
+                alt="Avatar 20" class="w-full h-full object-cover">
+            </button>
+          </div>
+
+          <div id="upload-tab" class="hidden">
+            <label
+              class="flex flex-col items-center gap-4 p-8 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="text-gray-400">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="17 8 12 3 7 8" />
+                <line x1="12" y1="3" x2="12" y2="15" />
+              </svg>
+              <div class="text-center">
+                <p class="text-sm font-medium text-blue-500">Click to upload</p>
+                <p class="text-xs text-gray-500 mt-1">PNG, JPG up to 10MB</p>
+              </div>
+              <input type="file" accept="image/*" onchange="handleFileUpload(event)" class="hidden" />
+            </label>
+          </div>
+
+          <div class="flex justify-end mt-4 space-x-3">
+            <button onclick="hideAvatarSelector()"
+              class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
+              Cancel
+            </button>
+            <button onclick="saveChanges()"
+              class="px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition-colors">
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <form>
+          <div class="relative group">
+            <div
+              class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50/50 backdrop-blur-sm group-hover:bg-gray-100/50 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="text-gray-400">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              <div class="flex-1">
+                <div class="text-sm text-gray-500">Name</div>
+                <div class="profile-value" id="name-value">John Doe</div>
+                <input type="text" class="profile-input" id="name-input" value="John Doe" name="Name">
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <div
+              class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50/50 backdrop-blur-sm group-hover:bg-gray-100/50 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="text-gray-400">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              <div class="flex-1">
+                <div class="text-sm text-gray-500">Email</div>
+                <div class="profile-value" id="email-value">john@example.com</div>
+                <input type="email" class="profile-input" id="email-input" value="john@example.com" name="Email">
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <div
+              class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50/50 backdrop-blur-sm group-hover:bg-gray-100/50 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="text-gray-400">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+                <line x1="3" x2="21" y1="10" y2="10" />
+              </svg>
+              <div class="flex-1">
+                <div class="text-sm text-gray-500">Age</div>
+                <div class="profile-value" id="age-value">25</div>
+                <input type="number" class="profile-input" id="age-input" value="25" name="Age">
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <div
+              class="flex items-center space-x-4 p-4 rounded-lg bg-gray-50/50 backdrop-blur-sm group-hover:bg-gray-100/50 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="text-gray-400">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <div class="flex-1">
+                <div class="text-sm text-gray-500">Phone</div>
+                <div class="profile-value" id="phone-value">+1 234 567 8900</div>
+                <input type="tel" class="profile-input" id="phone-input" value="+1 234 567 8900" name="Phone">
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end space-x-4">
+            <div class="edit-buttons" id="edit-buttons">
+              <button onclick="cancelEditing()"
+                class="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+                Cancel
+              </button>
+              <button id="save" onclick="saveChanges()"
+                class="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+                Save Changes
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="normal-buttons" id="normal-buttons">
+        <button onclick="startEditing()"
+          class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+          Edit Profile
+        </button>
+      </div>
+
+
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="account.html">Account</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Cookies Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">Customer Support</a></li>
+          <li><a href="mailto:support@swagbucks.com">Email Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Subscribe to Our Newsletter</h4>
+        <form action="#" class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-media">
+      <ul class="social-links">
+        <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>© 2025 Swagbucks. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/account.js"></script>
+
+</body>
+
+</html>

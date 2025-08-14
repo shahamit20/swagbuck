@@ -1,0 +1,120 @@
+[{
+  "_id": {
+   "$oid": "67f68b1b91c2d68678e66bf9"},
+  "Name": "Amit",
+  "Email": "shahamits123@gamil.com",
+  "Phone": 55,
+  "Age": "2025-03-31",
+  "Password": 555,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f68b71fd67e7c0d7ce2a84"
+  },
+  "Name": "Amit",
+  "Email": "shahamits123@gamil.com",
+  "Phone": 45475423,
+  "Age": "2025-04-02",
+  "Password": 55,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f68b8badf7a619534e0755"
+  },
+  "Name": "Amit",
+  "Email": "shahamits123@gamil.com",
+  "Phone": 45475423,
+  "Age": "2025-04-02",
+  "Password": 55,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f68bee538c7c882cd4b61c"
+  },
+  "Name": "Amit",
+  "Email": "shahamits123@gamil.com",
+  "Phone": 45475423,
+  "Age": "2025-04-02",
+  "Password": 55,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f68d1b59fc4868491a19fb"
+  },
+  "Name": "Amit",
+  "Email": "shahamits123@gamil.com",
+  "Phone": 45475423,
+  "Age": "2025-04-01",
+  "Password": 66,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f68e0e61b468182732af90"
+  },
+  "Name": "Amit",
+  "Email": "shahamits123@gamil.com",
+  "Phone": 45475423,
+  "Age": "2025-04-02",
+  "Password": 55,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f68e4c61b468182732af92"
+  },
+  "Name": "Amit",
+  "Email": "shahamits123@gamil.com",
+  "Phone": 45475423,
+  "Age": "2025-04-01",
+  "Password": 66,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f68e96845bb12979276757"
+  },
+  "Name": "Amit",
+  "Email": "shahamits123@gamil.com",
+  "Phone": 777777,
+  "Age": "2025-04-01",
+  "Password": 77,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f68ee76f7995ba12e8db04"
+  },
+  "Name": "Amit",
+  "Email": "shahamits123@gamil.com",
+  "Phone": 77777,
+  "Age": "2025-04-02",
+  "Password": 77,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f68efd6f7995ba12e8db06"
+  },
+  "Name": "Amit",
+  "Email": "shahamits123@gamil.com",
+  "Phone": 45475423,
+  "Age": "2025-04-02",
+  "Password": 55,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f68f453297c02e454539fa"
+  },
+  "Name": "Amit",
+  "Email": "shahamits123@gamil.com",
+  "Phone": 77777,
+  "Age": "2025-04-02",
+  "Password": 77,
+  "__v": 0
+}]

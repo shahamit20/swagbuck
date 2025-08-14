@@ -1,0 +1,158 @@
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); 
+    color: black !important;
+}
+
+  .profile-input {
+    display: none;
+  }
+  
+  .profile-input.editing {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #2c5364;
+    outline: none;
+    font-size: 1rem;
+    padding: 4px 0;
+  }
+
+  .profile-value {
+    display: block;
+  }
+
+  .profile-value.editing {
+    display: none;
+  }
+
+  .avatar-selector {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 1.5rem;
+    z-index: 50;
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .avatar-selector.show {
+    display: block;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 40;
+  }
+
+  .overlay.show {
+    display: block;
+  }
+
+  .edit-buttons {
+    display: none;
+  }
+
+  .edit-buttons.show {
+    display: flex;
+  }
+
+  .normal-buttons {
+    display: flex;
+  }
+
+  .normal-buttons.hide {
+    display: none;
+  }
+
+  .camera-button {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .profile-image-container:hover .camera-button {
+    opacity: 1;
+  }
+
+  .avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .avatar-option {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+
+  .avatar-option:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  .avatar-option.selected {
+    border: 3px solid #3b82f6;
+  }
+
+  .tabs {
+    display: flex;
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 1.5rem;
+  }
+
+  .tab {
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    color: #6b7280;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+  }
+
+  .tab.active {
+    color: #3b82f6;
+    border-bottom-color: #3b82f6;
+  }
+
+/* Scrollable Illustrations Tab */
+#illustrations-tab {
+  max-height: 200px; /* Set the height of the container */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px; /* Add space to prevent scrollbar overlap */
+}
+
+/* Custom Scrollbar Styling for Webkit Browsers (Chrome, Edge, Safari) */
+#illustrations-tab::-webkit-scrollbar {
+  width: 8px;
+}
+
+#illustrations-tab::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+#illustrations-tab::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Firefox scrollbar */
+#illustrations-tab {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}

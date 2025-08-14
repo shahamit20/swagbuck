@@ -1,0 +1,35 @@
+.activity-container{
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    justify-content: center;
+}
+.activity{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+    align-items: center;
+    border-radius: 10px;
+}
+.activity div{
+    width: 80%;
+    padding: 5px;
+    margin-left:50px;
+    --tw-bg-opacity: 1;
+    background:  linear-gradient(to right, #264154, #1e3642);
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;
+    border-radius: 10px;
+}
+.activity h2{
+   font-size: 2.5rem;
+}
+.activity p{
+    font-size: 2rem;
+}

@@ -1,0 +1,54 @@
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 147%;
+    overflow: scroll;
+    display: flex;
+}
+.box::-webkit-scrollbar{
+    display: none;
+}
+.survey-box {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    text-align: left;
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    flex-shrink: 0;
+}
+.survey-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.survey-box h3{
+    font-size: 2rem;
+}
+.survey-box p{
+    font-size: 1.2rem;
+}
+.btn {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.btn:hover {
+    background: #c0392b;
+}
