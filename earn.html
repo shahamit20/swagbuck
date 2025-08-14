@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Swagbucks</title>
-    <link rel="stylesheet" href="styles/activity.css">
+    <title>Smile & Earn - Swagbucks</title>
+    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/home.css">
-    <script src="scripts/activity.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
 </head>
-<body>
 
+<body>
     <!-- ======= Navigation Bar ======= -->
     <header>
         <nav class="navbar">
-            <div class="logo">JoyWallet</div>
+            <div class="logo">Swagbucks</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="earn.html">Smile</a></li>
@@ -26,20 +25,56 @@
                 <li><a href="aboutus.html">About Us</a></li>
             </ul>
             <div class="nav-icons">
-                <span class="coins">💰 <span id="total-coins">0</span> SB</span>
+                <span class="coins" id="coin-display">💰 0 SB</span>
                 <span class="notifications">🔔</span>
-                <a href="account.html" class="account">👤</a>
+                <a href="account.html"><span class="account">👤</span></a>
             </div>
         </nav>
     </header>
 
-    <!-- ======= activity Content ======= -->
-    <main class="activity-container">
-        <div class="activity">
-           
-        </div>
-    </main>
 
+   
+    <!-- ======= Camera Section ======= -->
+
+    <div class="pop pop1">
+        <h1>Congratulations 🎉</h1>
+        <h2>50SB Collect</h2>
+    </div>
+    <section class="camera-section">
+        <div class="banner">
+            <p>📸 Capture your best smiles & earn rewards! 🎉</p>
+            <button id="but" class="btn">Open WebCam</button>
+        </div>
+        <div class="cont">
+            <div class="camera-container">
+                <video id="vid" backgroud="black" autoplay>
+                </video>
+                
+            </div>
+            <div class="alert alert2">
+                <h3>You can only take one photo every 24 hours!</h3>
+                <button id="closs-alert">Close</button>
+            </div>
+            <button id="capture">Capture Image</button>
+            <button id="close">Closs WebCam</button>
+        </div>
+        <div class="eran">
+        <p class="earnings">You've earned: <span id="earnings">0 SB</span></p>
+    </div>
+
+
+    </section>
+
+    <!-- Past Selfies Section -->
+    <section class="selfies-section">
+        <h2>Your Last 7 Days' Selfies</h2>
+        <div class="selfies-grid" id="selfies-grid">
+            <!-- Dynamically populated with selfies -->
+        </div>
+        <div id="save" class="save save2">
+        </div>
+
+    </section>
     <!-- ======= Footer ======= -->
     <footer class="footer">
         <div class="footer-container">
@@ -75,23 +110,15 @@
                 </form>
             </div>
         </div>
-    
-        <!-- Social Media Links -->
-        <div class="social-media">
-            <ul class="social-links">
-                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>  
-            </ul>
-        </div>
-    
-        <!-- Copyright -->
         <div class="footer-bottom">
             <p>© 2025 Swagbucks. All rights reserved.</p>
         </div>
     </footer>
-    
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="scripts/face-api.min.js"></script>
+    <script defer src="scripts/index.js"></script>
 </body>
+
 </html>
+ 
